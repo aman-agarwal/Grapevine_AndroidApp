@@ -1,0 +1,179 @@
+<!-- Layout for one page in the photo feed. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFFFF"
+    android:fillViewport="true">
+
+    <!-- Divide page into information, image, and description sections. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/prof_pic"
+                android:layout_centerVertical="true"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/ic_prof" />
+
+            <!-- Photo uploader -->
+            <TextView
+                style="@style/ClickableInfo"
+                android:id="@+id/photo_uploader"
+                android:layout_toRightOf="@id/prof_pic"
+                android:layout_toEndOf="@id/prof_pic"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:text="author"/>
+
+        </RelativeLayout>
+
+        <!-- Photo. -->
+        <ImageView
+            android:id="@+id/photo"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:adjustViewBounds="true" />
+
+        <RelativeLayout
+            style="@style/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/ic_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_desc"/>
+
+            <!-- Photo description. -->
+            <TextView
+                style="@style/Content"
+                android:id="@+id/photo_desc"
+                android:layout_toRightOf="@id/ic_desc"
+                android:layout_toEndOf="@id/ic_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:hint="@string/photo_hint" />
+
+        </RelativeLayout>
+
+        <!-- Stats and action icons. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                style="?android:attr/segmentedButtonStyle"
+                android:background="@android:drawable/btn_default_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/fav_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_fav"
+                    android:clickable="true"
+                    android:onClick="favPhoto"/>
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_comments_empty"
+                    android:clickable="true"
+                    android:onClick="readComments"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="?android:attr/segmentedButtonStyle"
+                android:background="@android:drawable/btn_default_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_thumb_down"
+                    android:clickable="true"
+                    android:onClick="dislikePage"/>
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_thumb_up"
+                    android:clickable="true"
+                    android:onClick="likePage"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@android:drawable/btn_default_small" >
+
+                <TextView
+                    android:id="@+id/photo_shares"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:hint="Shares"/>
+
+                <ProgressBar
+                    android:id="@+id/stats_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginBottom="8dp"
+                    android:indeterminate="false"
+                    style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

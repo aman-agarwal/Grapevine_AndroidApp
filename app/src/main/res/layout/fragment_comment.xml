@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentFragment"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/comment_section"
+        style="@style/Content"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"/>
+
+    <View
+        android:layout_height="2dp"
+        android:layout_width="match_parent"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        style="@style/Content"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/ic_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_comment"/>
+
+        <ImageButton
+            android:id="@+id/ic_send"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:onClick="sendComment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_send"/>
+
+        <!-- User comment. -->
+        <EditText
+            style="@style/Content"
+            android:id="@+id/user_comment"
+            android:layout_toLeftOf="@id/ic_send"
+            android:layout_toStartOf="@id/ic_send"
+            android:layout_toRightOf="@id/ic_comment"
+            android:layout_toEndOf="@id/ic_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:hint="@string/comment_hint" />
+
+    </RelativeLayout>
+
+</LinearLayout>

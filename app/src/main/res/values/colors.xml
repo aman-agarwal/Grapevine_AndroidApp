@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Green color to show in background when user shares photo by swiping right. -->
+    <color name="green">#FF669900</color>
+
+    <!-- Red color to show in background when user does not share photo by swiping left. -->
+    <color name="red">#FFCC0000</color>
+
+    <!-- Purple color to theme app. -->
+    <color name="purple">#FF9933CC</color>
+
+    <!-- Light purple background color. -->
+    <color name="light_purple">#FFAA66CC</color>
+
+    <!-- Blue color for clickable items. -->
+    <color name="blue">#FF0099CC</color>
+
+    <!-- White color to surround views. -->
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Black color. -->
+    <color name="black">#FF000000</color>
+
+    <!-- Gray color. -->
+    <color name="gray">#FF757575</color>
+
+</resources>

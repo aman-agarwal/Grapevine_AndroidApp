@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Grapevine</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="parse_app_id">jxaBiwdsofHrHDkqx7WBECPDrN8yorDTFaujVG4Q</string>
+    <string name="parse_client_key">R8PtaZ7qLJ6CMEzzTUzv8nRbdpASHi7pWtgnSYAq</string>
+
+    <string name="facebook_app_id">757406937708419</string>
+
+    <string-array name="my_facebook_permissions">
+        <item>public_profile</item>
+    </string-array>
+
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+
+    <string name="photo_hint">Photo description.</string>
+    <string name="comment_hint">Thoughts?</string>
+
+    <string name="bullet">\u2022</string>
+    <string name="like">Like</string>
+    <string name="reply">Reply</string>
+
+</resources>

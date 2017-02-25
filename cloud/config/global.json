@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "Grapevine": {
+      "applicationId": "jxaBiwdsofHrHDkqx7WBECPDrN8yorDTFaujVG4Q",
+      "masterKey": "aImRtNczlsYOXoo0uT0lYaRATy70uZ7a8d7JBvrA"
+    },
+    "_default": {
+      "link": "Grapevine"
+    }
+  }
+}
